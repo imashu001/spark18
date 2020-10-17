@@ -12,6 +12,63 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+.body {
+  min-height: 100%;
+  min-width: 100%;
+  background-color: violet;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.left {
+  text-align: left;
+  margin-top: 90px;
+  background-color: thistle;
+  height: 50%;
+  width: 30%;
+}
+.right {
+  margin-top: 90px;
+  background-color: thistle;
+  height: 50%;
+  width: 30%;
+}
+.navbar {
+  background-color: #282c34;
+  height: 100px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: aliceblue;
+  text-align: center;
+}
+.navbar {
+  background-color: #282c34;
+  height: 100px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  color: aliceblue;
+  align-items: center;
+}
+
+.navigator {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  color: white;
+}
+.logo {
+  width: 50%;
+}
+.getintouch {
+  padding: 2px;
+  border: 1px solid white;
+}
 
 .App-header {
   background-color: #282c34;
@@ -26,13 +83,4 @@
 
 .App-link {
   color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
