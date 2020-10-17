@@ -1,21 +1,27 @@
 import React from "react";
 import logo from "./logo.svg";
-import Checkbox from "./Components/Checkbox";
 import "./App.css";
-import Application from "./Components/Application";
 import Navbar from "./Components/NavBar";
+import Right from "./Components/Right";
 
 class App extends React.Component {
   constructor() {
     super();
     this.state = {
       checked: false,
+      items: [],
     };
   }
   handleChange = (e) => {
+    console.log(e.target.value);
     this.setState({
       checked: !this.state.checked,
+      items:
+        e.target.checked === true
+          ? [...this.state.items, e.target.value]
+          : [...this.state.items],
     });
+    console.log(this.state.items);
   };
 
   render() {
@@ -29,7 +35,7 @@ class App extends React.Component {
               <li>
                 <input
                   type="checkbox"
-                  checked={this.state.checked}
+                  value="Aasalya Jayavanti"
                   onClick={this.handleClick}
                 />
                 <label> Aasalya Jayavanti</label>
@@ -38,7 +44,7 @@ class App extends React.Component {
               <li>
                 <input
                   type="checkbox"
-                  checked={this.state.checked}
+                  value="Luveen lawrence"
                   onClick={this.handleClick}
                 />
                 <label> Luveen lawrence</label>
@@ -48,7 +54,7 @@ class App extends React.Component {
                 {" "}
                 <input
                   type="checkbox"
-                  checked={this.state.checked}
+                  value="Ray Melbourne"
                   onClick={this.handleClick}
                 />
                 <label> Ray Melbourne</label>
@@ -57,10 +63,10 @@ class App extends React.Component {
               <li>
                 <input
                   type="checkbox"
-                  checked={this.state.checked}
+                  value="Cayila Breser"
                   onClick={this.handleClick}
                 />
-                <label> cayila Breser</label>
+                <label> Cayila Breser</label>
               </li>
             </ul>
             <h1>Nicaragua</h1>
@@ -68,7 +74,7 @@ class App extends React.Component {
               <li>
                 <input
                   type="checkbox"
-                  checked={this.state.checked}
+                  value="Devendas Nandi"
                   onClick={this.handleClick}
                 />
                 <label> Devendas Nandi</label>
@@ -77,7 +83,7 @@ class App extends React.Component {
               <li>
                 <input
                   type="checkbox"
-                  checked={this.state.checked}
+                  value="Obasey Chidi"
                   onClick={this.handleClick}
                 />
                 <label> Obasey Chidy</label>
@@ -86,8 +92,8 @@ class App extends React.Component {
               <li>
                 <input
                   type="checkbox"
+                  value=" Xenie Dolezelovs"
                   name="Xenie"
-                  checked={this.state.checked}
                   onClick={this.handleClick}
                 />
                 <label> Xenie Dolezelovs</label>
@@ -96,7 +102,7 @@ class App extends React.Component {
               <li>
                 <input
                   type="checkbox"
-                  checked={this.state.checked}
+                  value=" Ezequiel Dengra"
                   onClick={this.handleClick}
                 />
                 <label> Ezequiel Dengra</label>
@@ -108,7 +114,7 @@ class App extends React.Component {
               <li>
                 <input
                   type="checkbox"
-                  id="aaron"
+                  value=" AAron Almaraj"
                   onChange={this.handleChange}
                 />
                 <label>Aaron Almaraz</label>
@@ -117,14 +123,16 @@ class App extends React.Component {
               <li>
                 <input
                   type="checkbox"
-                  name="jelena"
+                  value="Jelena Denisova"
                   onChange={this.handleChange}
                 />
                 <label> Jelena Denisova</label>
               </li>
             </ul>
           </div>
-          <div className="right">GCUHVBNK</div>
+          <div className="right">
+            <Right state={this.state} />
+          </div>
         </div>
       </div>
     );
